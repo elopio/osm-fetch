@@ -14,7 +14,7 @@ confinement: strict
 apps:
   osm-fetch:
     command: osm-fetch
-    plugs: [home]
+    plugs: [home, network]
 
 parts:
   osm-fetch:
