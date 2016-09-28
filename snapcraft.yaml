@@ -1,0 +1,21 @@
+name: osm-fetch
+version: master
+summary: Fetch XML for a specific version of an OpenStreetMap feature
+description: |
+  Fetch XML representing a single version of a single feature from
+  OpenStreetMap. All references required to complete the feature are included.
+  The appropriate versions of references are selected based on the timestamp of
+  the desired version of the requested feature. If no version number is
+  specified, the most recent data available is retrieved.
+
+grade: stable
+confinement: strict
+
+apps:
+  osm-fetch:
+    command: osm-fetch
+
+parts:
+  osm-fetch:
+    source: .
+    plugin: nodejs
